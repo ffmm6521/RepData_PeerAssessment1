@@ -6,6 +6,7 @@ output:
 ---
 
 
+
 ## Loading and preprocessing the data
 ### 1 Load the data 
 
@@ -57,7 +58,7 @@ head(totalDay)
 hist(totalDay$steps,xlab = 'number of steps',main='Total number of steps per day')
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](figs/fig-unnamed-chunk-3-1.png)<!-- -->
 
 ### 2. Calculate and report the mean and median total number of steps taken per day
 
@@ -128,7 +129,7 @@ head(MeanDF)
 plot(agg$interval,agg$steps,type = 'l',xlab = 'Interval',ylab = 'Average number of steps')
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](figs/fig-unnamed-chunk-5-1.png)<!-- -->
 
 
 ### 2.Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
@@ -208,7 +209,7 @@ abline(v=mean(NewtotalDay$steps),col='blue')
 abline(v=median(NewtotalDay$steps),col='red',lwd=4,lty=22)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](figs/fig-unnamed-chunk-9-1.png)<!-- -->
 
 ```r
 newMeanDaytotal<-mean(NewtotalDay$steps,na.rm = T)
@@ -294,5 +295,9 @@ library(ggplot2)
 ggplot(plotdata,aes(interval,aveStep))+geom_line()+facet_grid(. ~ fac)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](figs/fig-unnamed-chunk-13-1.png)<!-- -->
+
+
+
+
 

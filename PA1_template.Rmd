@@ -5,6 +5,13 @@ output:
     keep_md: true
 ---
 
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+knitr::opts_chunk$set( fig.path = "figs/fig-")
+
+```
 
 ## Loading and preprocessing the data
 ### 1 Load the data 
@@ -138,4 +145,8 @@ plotdata
 library(ggplot2)
 ggplot(plotdata,aes(interval,aveStep))+geom_line()+facet_grid(. ~ fac)
 ```
+
+
+
+
 
